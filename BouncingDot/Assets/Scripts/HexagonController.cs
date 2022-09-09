@@ -18,14 +18,14 @@ public class HexagonController : MonoBehaviour
             transform.position.z
         ));
 
-        if (Input.GetMouseButtonDown(0) && _mousePos.x < 0)//Mouse sol click'i aşağıda ve x 0'dan küçükse;(Ekranın sol poz'u
-        {//Hexagon'u iki aşamalı çevirdiğimizi çin WaitForSeconds kullandık. Bir süre bekleyip diğer Rotate işlemini yapıyor.
+        if (Input.GetMouseButtonDown(0) && _mousePos.x < 0)//Mouse sol click'i basılı ve x 0'dan küçükse;(Ekranın sol poz'u
+        {//Hexagon'u iki aşamalı çevirdiğimizi için WaitForSeconds kullandık. Bir süre bekleyip diğer Rotate işlemini yapıyor.
             transform.Rotate(0f,0f,30f);
             yield return new WaitForSeconds(0.1f); 
             transform.Rotate(0f, 0f, 30f);
         }
-        else if (Input.GetMouseButtonDown(0)&& _mousePos.x > 0)//Mouse sol click'i aşağıda ve x 0'dan büyükse;(Ekranın sağ poz'u
-        {//Hexagon'u iki aşamalı çevirdiğimizi çin WaitForSeconds kullandık. Bir süre bekleyip diğer Rotate işlemini yapıyor.
+        else if (Input.GetMouseButtonDown(0)&& _mousePos.x > 0)//Mouse sol click'i basılı ve x 0'dan büyükse;(Ekranın sağ poz'u
+        {//Hexagon'u iki aşamalı çevirdiğimizi için WaitForSeconds kullandık. Bir süre bekleyip diğer Rotate işlemini yapıyor.
             transform.Rotate(0f,0f,-30f);
             yield return new WaitForSeconds(0.1f); 
             transform.Rotate(0f, 0f, -30f);
