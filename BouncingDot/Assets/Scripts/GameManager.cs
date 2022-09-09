@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
    private void Update()
    {
        _scoreText.text = score.ToString();
+       if (score > PlayerPrefs.GetInt("_bestScore"))//score'umuz PlayerPrefs.GetInt keyinden büyük ise;
+       {
+           PlayerPrefs.SetInt("_bestScore", score);//bestScore'u güncelliyoruz
+       }
+      
    }
 
    public void RestartGame()
